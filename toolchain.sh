@@ -6,7 +6,7 @@
 #DO_REINSTALLS=true
 
 # use newlib-nano
-#NANO=true
+NANO=true
 
 TARGET=arm-none-eabi
 PREFIX="$HOME/toolchain"
@@ -17,8 +17,8 @@ export CC=gcc
 #GCC_URL="https://launchpad.net/gcc-linaro/4.7/4.7-2012.08/+download/gcc-linaro-4.7-2012.08.tar.bz2"
 #GCC_VERSION="gcc-linaro-4.7-2012.08"
 
-GCC_URL="https://launchpad.net/gcc-linaro/4.8/gcc-linaro-4.8-2013.06-1/+download/gcc-linaro-4.8-2013.06-1.tar.xz"
-GCC_VERSION="gcc-linaro-4.8-2013.06-1"
+GCC_URL="https://launchpad.net/gcc-linaro/4.8/gcc-linaro-4.8-2013.07-1/+download/gcc-linaro-4.8-2013.07-1.tar.xz"
+GCC_VERSION="gcc-linaro-4.8-2013.07-1"
 
 #GCC_URL="ftp://gcc.gnu.org/pub/gcc/snapshots/4.8-20120610/gcc-4.8-20120610.tar.bz2"
 #GCC_VERSION="gcc-4.8-20120610"
@@ -31,11 +31,11 @@ NEWLIB_URL="ftp://sourceware.org/pub/newlib/newlib-2.0.0.tar.gz"
 NEWLIB_VERSION="newlib-2.0.0"
 fi
 
-BINUTILS_URL="http://ftp.gnu.org/gnu/binutils/binutils-2.22.tar.gz"
-BINUTILS_VERSION="binutils-2.22"
+BINUTILS_URL="http://ftp.gnu.org/gnu/binutils/binutils-2.23.2.tar.gz"
+BINUTILS_VERSION="binutils-2.23.2"
 
-GDB_URL="http://ftp.gnu.org/gnu/gdb/gdb-7.4.1.tar.gz"
-GDB_VERSION="gdb-7.4.1"
+GDB_URL="http://ftp.gnu.org/gnu/gdb/gdb-7.6.tar.gz"
+GDB_VERSION="gdb-7.6"
 
 STLINK_REPOSITORY="git://github.com/texane/stlink.git"
 STLINK="stlink"
@@ -169,6 +169,7 @@ NEWLIB_FLAGS="--target=${TARGET} \
 		--enable-newlib-reent-small \
 		--enable-target-optspace \
 		--enable-multilib \
+		--enable-newlib-nano-malloc \
 		--enable-interwork"
 
 
